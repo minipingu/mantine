@@ -1,4 +1,11 @@
 {
 	"prisma-smart-formatter.typescript.defaultFormatter": "esbenp.prettier-vscode",
-	"prisma-smart-formatter.prisma.defaultFormatter": "Prisma.prisma"
+	"prisma-smart-formatter.prisma.defaultFormatter": "Prisma.prisma",
+	"cssVariables.lookupFiles": [
+		"**/*.css",
+		"**/*.scss",
+		"**/*.sass",
+		"**/*.less",
+		"node_modules/@mantine/core/styles.css"
+	]
 }
