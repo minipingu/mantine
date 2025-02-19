@@ -5,9 +5,7 @@ const review = async ({
 }: {
 	params: Promise<{ productId: string; reviewId: string }>
 }) => {
-	const productId = (await params).productId
-	const reviewId = (await params).reviewId
-
+	const { productId, reviewId } = await params
 	return (
 		<div>
 			product id : {productId}, review id : {reviewId}
