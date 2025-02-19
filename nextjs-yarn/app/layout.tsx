@@ -7,7 +7,10 @@ import {
 	MantineProvider,
 	ColorSchemeScript,
 	mantineHtmlProps,
+	Container,
 } from '@mantine/core'
+import { GeneralFooter } from './components/footer/general-footer'
+import { GeneralHeader } from './components/header/general-header'
 
 const theme = createTheme({
 	/** Put your mantine theme override here */
@@ -45,7 +48,9 @@ export default function RootLayout({
 			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
 				<MantineProvider defaultColorScheme='dark' theme={theme}>
-					{children}
+					<GeneralHeader />
+					<Container>{children}</Container>
+					<GeneralFooter />
 				</MantineProvider>
 			</body>
 		</html>

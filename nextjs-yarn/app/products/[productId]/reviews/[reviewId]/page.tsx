@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import React from 'react'
 
 const review = async ({
@@ -6,6 +7,10 @@ const review = async ({
 	params: Promise<{ productId: string; reviewId: string }>
 }) => {
 	const { productId, reviewId } = await params
+	if (Number(reviewId) > 1000) {
+		//trigger not found page
+		notFound()
+	}
 	return (
 		<div>
 			product id : {productId}, review id : {reviewId}
