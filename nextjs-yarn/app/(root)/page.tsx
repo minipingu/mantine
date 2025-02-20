@@ -1,12 +1,16 @@
-import { Box, Button, Title } from '@mantine/core'
+import { Box, Button, Flex, Title } from '@mantine/core'
 import './page.module.css'
+import Link from 'next/link'
+
 export default function Home() {
 	return (
-		<Box>
-			<Title order={3} className='text-3xl font-bold underline'>
-				This is TITLE
+		<Flex>
+			<Title order={1} className='text-3xl font-bold underline '>
+				Welcome to Igloo!
 			</Title>
-			<Button>ini Button</Button>
-		</Box>
+			<Link href='/about'>
+				<Button>About</Button>
+			</Link>
+		</Flex>
 	)
 }

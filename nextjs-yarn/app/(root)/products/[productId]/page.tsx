@@ -5,9 +5,10 @@ type params = {
 	params: Promise<{ productId: string }>
 }
 // this is a dynamic metadata taken from params
+// if there is client side, make it as component first
 export const generateMetadata = async ({ params }: params) => {
 	return {
-		title: (await params).productId,
+		title: `${(await params).productId}`,
 		description: 'Detail Product Page',
 	}
 }

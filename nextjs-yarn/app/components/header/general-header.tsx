@@ -28,6 +28,8 @@ import {
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import classes from './HeaderMegaMenu.module.css'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 const mockdata = [
 	{
@@ -69,7 +71,7 @@ export function GeneralHeader() {
 	const theme = useMantineTheme()
 
 	const links = mockdata.map((item) => (
-		<UnstyledButton className={classes.subLink} key={item.title}>
+		<UnstyledButton className={'classes.subLink'} key={item.title}>
 			<Group wrap='nowrap' align='flex-start'>
 				<ThemeIcon size={34} variant='default' radius='md'>
 					<item.icon size={22} color={theme.colors.blue[6]} />
@@ -86,15 +88,26 @@ export function GeneralHeader() {
 		</UnstyledButton>
 	))
 
+	const MenuLink = (href: string, menu: string) => {
+		const pathname = usePathname()
+		return (
+			<Link
+				href={href}
+				className={`${classes.link} ${
+					href === pathname ? 'bg-blue-700' : ''
+				}`}>
+				{menu}
+			</Link>
+		)
+	}
+
 	return (
 		<Box pb={120}>
 			<header className={classes.header}>
 				<Group justify='space-between' h='100%'>
 					Disini Logo ygy
 					<Group h='100%' gap={0} visibleFrom='sm'>
-						<a href='#' className={classes.link}>
-							Home
-						</a>
+						{MenuLink('/', 'Home')}
 						<HoverCard
 							width={600}
 							position='bottom'
@@ -145,9 +158,7 @@ export function GeneralHeader() {
 								</div>
 							</HoverCard.Dropdown>
 						</HoverCard>
-						<a href='#' className={classes.link}>
-							Learn
-						</a>
+						{MenuLink('/about', 'About')}
 						<a href='#' className={classes.link}>
 							Academy
 						</a>
