@@ -264,6 +264,11 @@
   resolved "https://registry.yarnpkg.com/@mantine/tiptap/-/tiptap-7.17.0.tgz#05c2a62b8784883c5f3349716567a6415d2a506b"
   integrity sha512-WgmtQ5xJ9fenEbgpfG/HFU8O5R9SWrI8NJTpc0VLQKA2t+I4S/j8dTXr58aLCEXqqo6MlX9hkIDZQSxzUNoPXQ==
 
+"@mantinex/dev-icons@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@mantinex/dev-icons/-/dev-icons-1.1.0.tgz#021d1de43d7bc530b2a58e9493be36ad7567a855"
+  integrity sha512-ovve4xpjhBA29CIxwnTvIi6pJ7jWJftBFHiI2AAj79MGaVxteuj4o7G1j4gK0+b5U770vceXUVAKAwVBDTa5Aw==
+
 "@next/env@15.1.7":
   version "15.1.7"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-15.1.7.tgz#14e2678f893aec50ff2dcb7a6665092fb9e1263d"
