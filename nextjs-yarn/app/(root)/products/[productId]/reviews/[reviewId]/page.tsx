@@ -10,6 +10,8 @@ const review = async ({
 	if (Number(reviewId) > 1000) {
 		//trigger not found page
 		notFound()
+		// or use redirect
+		// redirect('/products')
 	}
 	return (
 		<div>
