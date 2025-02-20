@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
+import './../globals.css'
 import '@mantine/core/styles.css'
 import {
 	createTheme,
@@ -9,8 +9,7 @@ import {
 	mantineHtmlProps,
 	Container,
 } from '@mantine/core'
-import { GeneralFooter } from './components/footer/general-footer'
-import { GeneralHeader } from './components/header/general-header'
+import { GeneralHeader } from '../components/header/general-header'
 
 const theme = createTheme({
 	/** Put your mantine theme override here */
@@ -50,7 +49,6 @@ export default function RootLayout({
 				<MantineProvider defaultColorScheme='dark' theme={theme}>
 					<GeneralHeader />
 					<Container>{children}</Container>
-					<GeneralFooter />
 				</MantineProvider>
 			</body>
 		</html>
