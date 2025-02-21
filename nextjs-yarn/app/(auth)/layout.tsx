@@ -47,7 +47,6 @@ export default function AuthLayout({
 			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
 				<MantineProvider defaultColorScheme='dark' theme={theme}>
-					<GeneralHeader />
 					<Container>{children}</Container>
 				</MantineProvider>
 			</body>

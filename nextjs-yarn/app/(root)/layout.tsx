@@ -13,7 +13,7 @@ import { GeneralHeader } from '../components/header/general-header'
 import { GeneralFooter } from '../components/footer/general-footer'
 
 const theme = createTheme({
-	/** Put your mantine theme override here */
+		/** Put your mantine theme override here */
 })
 
 const geistSans = Geist({
