@@ -1,0 +1,1 @@
+so this parallel route works like nested folder but its not nested, i mean you can use handling error, loading and so on, act as folder but treated like component

@@ -1,4 +1,15 @@
-import { Box, Button, Flex, Title } from '@mantine/core'
+import {
+	Box,
+	Button,
+	Card,
+	Flex,
+	Title,
+	Text,
+	Badge,
+	Group,
+	Image,
+	CardSection,
+} from '@mantine/core'
 import './page.module.css'
 import Link from 'next/link'
 
