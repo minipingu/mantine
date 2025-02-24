@@ -7,13 +7,17 @@ const ComplexDashboardLayout = ({
 	users,
 	revenue,
 	notifications,
+	login,
 }: {
 	children: React.ReactNode
 	users: React.ReactNode
 	revenue: React.ReactNode
 	notifications: React.ReactNode
+	login: React.ReactNode
 }) => {
-	return (
+	const isLoggedIn = false
+
+	return isLoggedIn ? (
 		<Stack gap='md'>
 			<Center>{children}</Center>
 			<Grid>
@@ -22,6 +26,8 @@ const ComplexDashboardLayout = ({
 			</Grid>
 			{revenue}
 		</Stack>
+	) : (
+		login
 	)
 }
 
